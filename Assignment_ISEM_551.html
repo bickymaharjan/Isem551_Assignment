@@ -1,0 +1,107 @@
+
+<!--Assignment 1, ISEM 551-51-2015-Fall, Name:Bicky Maharjan, Student # 156151, Single page App using html5, javascript, jquery, css.-->
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Assignment 1: Simple Web Page (Git and JavaScript)</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script language="javascript">
+        function alertUserClick() {
+            alert("I am being clicked, I would like to let the users know that this textbox required your Firstname");
+        }
+        function showName() {
+            alert("Firstname is entered");
+        }
+        function showFullName() {
+            var s1 = $("#i1").val();
+            var s2 = $("#i2").val();
+            var s3 = $("#i4").val();
+            $("#i3").click(function () {
+                s3 = s1.concat(s2)
+            })
+        }
+        $(function () {
+            if ($("#i2") == '') {
+                $("#i2").val("Enter your Last Name");
+            }
+            $("#i2").click(function () {
+                if ($(this).val() == "Enter your Last Name") {
+                    $(this).val("");
+                }
+            });
+            $("#i2").blur(function () {
+                if ($(this).val().length == 0) {
+                    $(this).val("Enter your Last Name");
+                }
+            })
+        })
+    </script>
+    <style>
+        body {
+            color: blueviolet;
+            text-decoration: wavy;
+            font-size: 20px;
+            background-color: lightgreen;
+        }
+        h3 {
+            text-shadow: 2px 2px;
+        }
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            -webkit-animation-name: example; /* Chrome, Safari, Opera */
+            -webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
+            animation-name: example;
+            animation-duration: 4s;
+        }
+        /* Chrome, Safari, Opera */
+        @-webkit-keyframes example {
+            from {
+                background-color: red;
+            }
+
+            to {
+                background-color: yellow;
+            }
+        }
+        /* Standard syntax */
+        @keyframes example {
+            from {
+                background-color: red;
+            }
+            to {
+                background-color: yellow;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h3 style="color:blue;margin-left:30px;">This is a single page App.</h3>
+    <br />
+    <p>
+        Assignment 1: Simple Web Page (Git and JavaScript)
+    </p>
+    <p>
+        Html 5 placeholder propety, Using JQuery Library for click and blur events. Using css for animation and coloring the page elements.
+    </p>
+    <br />
+    First Name: <br />
+    <input type="text" id="i1" name="n1" onclick="alertUserClick()" placeholder="Enter your First Name" onchange="showName()" />
+    <br />
+    Last Name: <br />
+    <input type="text" id="i2" name="n2" value="Enter your Last Name" />
+    <br />
+    <input type="submit" id="i3" onclick="ShowFullName()"/>
+    <br />
+    <label for="Full Name" id="i4">Full Name: </label>
+
+    <br /><br />
+    <div></div>
+    <p>
+        When an animation is finished, it changes back to its original style. This animation shows the color change on the box from red to yello and back.
+    </p>
+</body>
+</html>
+
