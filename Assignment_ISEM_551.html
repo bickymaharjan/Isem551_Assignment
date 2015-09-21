@@ -1,4 +1,3 @@
-
 <!--Assignment 1, ISEM 551-51-2015-Fall, Name:Bicky Maharjan, Student # 156151, Single page App using html5, javascript, jquery, css.-->
 
 <!DOCTYPE html>
@@ -8,31 +7,30 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script language="javascript">
         function alertUserClick() {
-            alert("I am being clicked, I would like to let the users know that this textbox required your Firstname");
+            alert("I am being clicked, I would like to let the users know that this textbox required your Phone No");
         }
-        function showName() {
-            alert("Firstname is entered");
+        function showContacts() {
+            alert("Phone No is entered");
         }
-        function showFullName() {
+        function showFullContacts() {
             var s1 = $("#i1").val();
             var s2 = $("#i2").val();
-            var s3 = $("#i4").val();
-            $("#i3").click(function () {
-                s3 = s1.concat(s2)
-            })
+            //var s3 = $(s1, s2);
+            var s3 = $($("#i1").val(), $("#i2").val());
+            $("#i4").val(s3)
         }
         $(function () {
             if ($("#i2") == '') {
-                $("#i2").val("Enter your Last Name");
+                $("#i2").val("Enter your Phone No");
             }
             $("#i2").click(function () {
-                if ($(this).val() == "Enter your Last Name") {
+                if ($(this).val() == "Enter your Address") {
                     $(this).val("");
                 }
             });
             $("#i2").blur(function () {
                 if ($(this).val().length == 0) {
-                    $(this).val("Enter your Last Name");
+                    $(this).val("Enter your Address");
                 }
             })
         })
@@ -87,21 +85,21 @@
         Html 5 placeholder propety, Using JQuery Library for click and blur events. Using css for animation and coloring the page elements.
     </p>
     <br />
-    First Name: <br />
-    <input type="text" id="i1" name="n1" onclick="alertUserClick()" placeholder="Enter your First Name" onchange="showName()" />
+    Phone No: <br />
+    <input type="text" id="i1" name="n1" onclick="alertUserClick()" placeholder="Enter your Phone No" onchange="showContacts()" />
     <br />
-    Last Name: <br />
-    <input type="text" id="i2" name="n2" value="Enter your Last Name" />
+    Address: <br />
+    <input type="text" id="i2" name="n2" value="Enter your Address" />
     <br />
-    <input type="submit" id="i3" onclick="ShowFullName()"/>
+    <input type="button" id="i3" value="Submit your Complete Address" onclick="showFullContacts()" />
     <br />
-    <label for="Full Name" id="i4">Full Name: </label>
-
+    This Textbox shows the complete address.
+    <input type="text" id="i4" value="This is your complete address." />
+    <p id="demoname"></p>
     <br /><br />
     <div></div>
     <p>
-        When an animation is finished, it changes back to its original style. This animation shows the color change on the box from red to yello and back.
+        This is a sample of css animation. When an animation is finished, it changes back to its original style. This animation shows the color change on the box from red to yello and back.
     </p>
 </body>
 </html>
-
