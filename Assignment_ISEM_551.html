@@ -42,7 +42,26 @@
                 }
             })
         })
+
+        // scripts for angular js codes
+        var addressBook = angular.module('addressBook', ['ngRoute']);
+        addressBook.Config(function($routeProvider){
+        $routeProvider
+            //// routing to home
+            //.when('/', {
+            //    templateUrl : 'pages/home.html',
+            //    controller  : 'mainController'
+            //})
+
+        	//// routing to about
+			//.when('/', {
+			//    templateUrl : 'pages/about.html',
+			//    controller  : 'aboutController'
+			//})
+        });
+
     </script>
+
     <style>
         body {
             color: blueviolet;
@@ -90,8 +109,15 @@
     <h3 style="color:blue;margin-left:30px;">This is a single page App.</h3>
     <br />
     <p>
-        Assignment 1: Simple Web Page (Git and JavaScript)
+        Assignment 2: Simple Web Page (Git and JavaScript), Adding Angular JS and Bootstrap.
     </p>
+    <div>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+            <li><a href="#about"><i class="fa fa-shield"></i> About</a></li>
+            <li><a href="#contact"><i class="fa fa-comment"></i> Contact</a></li>
+        </ul>
+    </div>
     <p>
         Html 5 placeholder propety, Using JQuery Library for click and blur events. Using css for animation and coloring the page elements.
     </p>
@@ -136,7 +162,7 @@
     <script>
         var app = angular.module('Addressbook', []);
         app.controller('myCtrl', function ($scope) {
-            $scope.address = "Bicky Bond";
+            $scope.address = "Bicky Bicky";
             $scope.phone = "201001001001";
         });
     </script>
@@ -173,7 +199,7 @@
 
         <hr>
         <button class="btn btn-success" ng-click="editAddress('new')">
-            <span class="glyphicon glyphicon-user"></span> Add New Address
+            <span class="glyphicon glyphicon-user"></span> Edit Existing Address
         </button>
         <hr>
 
