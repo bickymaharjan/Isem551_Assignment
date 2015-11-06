@@ -47,17 +47,17 @@
         var addressBook = angular.module('addressBook', ['ngRoute']);
         addressBook.Config(function($routeProvider){
         $routeProvider
-            //// routing to home
-            //.when('/', {
-            //    templateUrl : 'pages/home.html',
-            //    controller  : 'mainController'
-            //})
+            // routing to home
+            .when('/', {
+                templateUrl : '/home.html',
+                controller  : 'mainController'
+            })
 
-        	//// routing to about
-			//.when('/', {
-			//    templateUrl : 'pages/about.html',
-			//    controller  : 'aboutController'
-			//})
+        	// routing to about
+			.when('/', {
+			    templateUrl : '/about.html',
+			    controller  : 'aboutController'
+			})
         });
 
     </script>
@@ -105,19 +105,36 @@
         }
     </style>
 </head>
-<body ng-app="SearchAddressbook">
+<body ng-app="SearchAddressbook" style="margin:5px">
     <h3 style="color:blue;margin-left:30px;">This is a single page App.</h3>
     <br />
     <p>
         Assignment 2: Simple Web Page (Git and JavaScript), Adding Angular JS and Bootstrap.
     </p>
-    <div>
+    <div style="width:30%; background-color:none;">
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
-            <li><a href="#about"><i class="fa fa-shield"></i> About</a></li>
-      
+            <li><a href="#"><i class=""></i>  Home</a></li>
+            <li><a href="#about"><i class=""></i>  About</a></li>
+           
         </ul>
     </div>
+
+    <div style="width:30%; background-color:none;">
+        <h1>About Page</h1>
+
+        <p>{{ message }}</p>
+    </div>
+
+    <div style="width:30%; background-color:none;">
+        <h1>Home Page</h1>
+
+        <p>{{ message }}</p>
+    </div>
+
+
+
+
+
     <p>
         Html 5 placeholder propety, Using JQuery Library for click and blur events. Using css for animation and coloring the page elements.
     </p>
