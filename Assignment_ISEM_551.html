@@ -1,6 +1,6 @@
 <!--Assignment 2, ISEM 551-51-2015-Fall, Name:Bicky Maharjan, Student # 156151, Single page App using html5, javascript, jquery, css.-->
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" ng-app>
 <head>
     <title>Assignment 1: Simple Web Page (Git and JavaScript)</title>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 
     <!--adding angular js-->
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
 
 
     <script language="javascript">
@@ -143,7 +143,7 @@
     <input type="text" id="i1" name="n1" onclick="alertUserClick()" placeholder="Enter your Phone No" onchange="showContacts()" data-ng-model="Phone" />
     <br />
     Address: <br />
-    <input type="text" id="i2" name="n2" value="Enter your Address" data-ng-model="Address" />
+    <input type="text" id="i2" name="n2" value="Enter your Address" data-ng-model="address" />
     <br />
     <input type="button" id="i3" value="Submit your Complete Address" onclick="showFullContacts()" data-ng_model="Submit" />
     <br />
@@ -160,7 +160,7 @@
         Angular JS is below this Line:
     </p>
     <div ng-app="" style="background-color:white; width:100%;">
-        <p>Name: <input type="text" ng-model="name"></p>
+        <!--<p>Name: <input type="text" ng-model="name"></p>-->
         <!--<p>{{name}}</p>-->
     </div>
 
