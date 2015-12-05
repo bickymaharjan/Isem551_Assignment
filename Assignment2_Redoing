@@ -1,0 +1,68 @@
+<!--Assignment 2, ISEM 551-51-2015-Fall, Name:Bicky Maharjan, Student # 156151, Single page App AngularJS , Bootstrap.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>AngularJS Assignment 2</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js"></script>
+    <script src="script.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body ng-app="AddressBookApp">
+    <div class="container">
+        <h2>AngularJS Assignment 2: Address Book Application</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <ul class="nav">
+                    <li><a href="#Main"> Main </a></li>
+                    <li><a href="#About"> About </a></li>
+                </ul>
+            </div>
+            <div class="col-md-9">
+                <div ng-view>
+
+                </div>
+                <br><br>
+                <div class="form-group">
+                    <label>
+                        Street Address:
+                        <input type="text" ng-model="StreetAddress" class="form-control" />
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label>
+                        Zip Code and State:
+                        <input type="text" ng-model="ZipCodeAndState" class="form-control" />
+                    </label>
+                </div>
+                <h1 ng-if="StreetAddress && ZipCodeAndState">The Address is {{StreetAddress}} {{ZipCodeAndState}}</h1>
+            </div>
+        </div>
+
+            <!--<div class="form">-->
+            <!--ng-view-->
+            <!--view will be injected here because ng-view tag is put in this div-->
+            <!--<h2>AngularJS Assignment 2: Address Book Application</h2>
+
+        <div class="form-group">
+            <label>
+                Street Address:
+                <input type="text" ng-model="StreetAddress" class="form-control" />
+            </label>
+        </div>
+        <div class="form-group">
+            <label>
+                Zip Code and State:
+                <input type="text" ng-model="ZipCodeAndState" class="form-control" />
+            </label>
+        </div>
+
+        <h1 ng-if="StreetAddress && ZipCodeAndState">The Address is {{StreetAddress}} {{ZipCodeAndState}}</h1>-->
+            <!--</div>-->
+        </div>
+</body>
+</html>
+
+
